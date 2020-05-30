@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "strict-standard",
     "test": "./node_modules/mocha/bin/mocha",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "ziel",
   "repository": "github:ziel/whoshiring",
@@ -17,7 +19,8 @@
     "hacker-news-api": "^2.0.0",
     "html-to-text": "^2.0.0",
     "sanitize-html": "^1.11.3",
-    "word-wrap": "^1.1.0"
+    "word-wrap": "^1.1.0",
+    "snyk": "^1.332.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -27,5 +30,6 @@
   },
   "engines": {
     "node": ">= 4.0.0"
-  }
+  },
+  "snyk": true
 }
